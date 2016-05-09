@@ -296,20 +296,20 @@ sql_queue       = Queue.Queue()
 
 workerThreads   = []
 
-k_host          = "youssif-home.ddns.net"
+k_host          = "ip"
 k_port          = 2501
 db_host         = 'youssifprojects.com'
 db_port         = 3306
-db_user         = 'youssifp_kismetU'
-db_passwd       = 'EENG4910'
-db_database     = 'youssifp_kismet'
+db_user         = 'user'
+db_passwd       = 'password'
+db_database     = 'db'
 
 
 kismet          = Kismet(k_host, k_port)
 data_handler    = Data_Handler()
 sql             = SQL_Database(db_host, db_port, db_user, db_passwd, db_database)
 
-sql.db_table    = db_table = 'kismet_data2'
+sql.db_table    = db_table = 'table'
 
 t_kismet        = threading.Thread(name="kismet", target=kismet.run, args=(kismet_queue,))
 t_data_handler  = threading.Thread(name="data_handler", target=data_handler.run, args=(kismet_queue, sql_queue,))
