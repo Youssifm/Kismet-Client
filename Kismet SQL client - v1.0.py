@@ -144,11 +144,11 @@ print con_status
 # ------ End Open Socket For Kismet ---------------------------- #
 
 # ------ Connect To SQL DB ------------------------------------- #
-db_host = 'youssifprojects.com'
+db_host = 'IP Address'
 db_port = 3306
-db_user = 'youssifp_kismetU'
-db_passwd = 'EENG4910'
-db_database = 'youssifp_kismet'
+db_user = 'User'
+db_passwd = 'Password'
+db_database = 'Database name'
 
 sql = SQL_Database(db_host, db_port, db_user, db_passwd, db_database)
 con_status = sql.db_connect()
